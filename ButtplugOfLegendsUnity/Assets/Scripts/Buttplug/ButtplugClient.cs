@@ -63,7 +63,7 @@ public class ButtplugClient : MonoBehaviour
             try
             {
                 CreateClient();
-                var address = new Uri(addressInputField.text);
+                var address = new Uri("ws://192.168.1.124:12345/buttplug");
                 var connector = new ButtplugWebsocketConnectorOptions(address);
                 connectionStatusLabel.text = "<color=yellow>Connecting...</color>";
                 await client.ConnectAsync(connector);
